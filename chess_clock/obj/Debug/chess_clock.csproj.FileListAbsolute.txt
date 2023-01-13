@@ -1,0 +1,16 @@
+C:\WPF projects\chess_clock\chess_clock\bin\Debug\chess_clock.exe.config
+C:\WPF projects\chess_clock\chess_clock\bin\Debug\chess_clock.exe
+C:\WPF projects\chess_clock\chess_clock\bin\Debug\chess_clock.pdb
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.csproj.AssemblyReference.cache
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.csproj.SuggestedBindingRedirects.cache
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\MainWindow.g.cs
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\App.g.cs
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock_MarkupCompile.cache
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock_MarkupCompile.lref
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\MainWindow.baml
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.g.resources
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.Properties.Resources.resources
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.csproj.GenerateResource.cache
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.csproj.CoreCompileInputs.cache
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.exe
+C:\WPF projects\chess_clock\chess_clock\obj\Debug\chess_clock.pdb
