@@ -24,7 +24,7 @@ namespace chess_clock
     public partial class MainWindow : Window
     {
         public bool isActiveW, isActiveB;
-        public int ctime;
+        public int ctime, btime, wtime;
         public DispatcherTimer timer;
         public MainWindow()
         {
@@ -62,7 +62,7 @@ namespace chess_clock
                 }
                 else
                 {
-                    MessageBox.Show("Vesztett a fehér!");
+                    MessageBox.Show("Lejárt az idő!");
                 }
             }
             if (isActiveB)
@@ -74,7 +74,7 @@ namespace chess_clock
                 }
                 else
                 {
-                    MessageBox.Show("Vesztett a fekete!");
+                    MessageBox.Show("Lejárt az idő!");
                 }
             }
         }
@@ -158,11 +158,41 @@ namespace chess_clock
                 {
                     isActiveB = false;
                     isActiveW = true;
+                    string bszam = whiteL.Content.ToString();
+                    if (bszam.Length == 4)
+                    {
+                        int bmin = Convert.ToInt32(bszam.Substring(0, 1));
+                        int bsec = Convert.ToInt32(bszam.Substring(2, 2));
+                        int bossz = bmin * 60 + bsec;
+                        ctime = bossz;
+                    }
+                    else if (bszam.Length == 3)
+                    {
+                        int bmin = Convert.ToInt32(bszam.Substring(0, 1));
+                        int bsec = Convert.ToInt32(bszam.Substring(2, 1));
+                        int bossz = bmin * 60 + bsec;
+                        ctime = bossz;
+                    }
                 }
-                else
+                else if (isActiveW)
                 {
                     isActiveW = false;
-                    isActiveB = true;
+                    isActiveB = true; 
+                    string wszam = blackL.Content.ToString();
+                    if (wszam.Length == 4)
+                    {
+                        int wmin = Convert.ToInt32(wszam.Substring(0, 1));
+                        int wsec = Convert.ToInt32(wszam.Substring(2, 2));
+                        int wossz = wmin * 60 + wsec;
+                        ctime = wossz;
+                    }
+                    else if (wszam.Length == 3)
+                    {
+                        int wmin = Convert.ToInt32(wszam.Substring(0, 1));
+                        int wsec = Convert.ToInt32(wszam.Substring(2, 1));
+                        int wossz = wmin * 60 + wsec;
+                        ctime = wossz;
+                    }
                 }
             }
         }
