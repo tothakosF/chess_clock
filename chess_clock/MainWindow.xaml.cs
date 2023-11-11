@@ -35,7 +35,7 @@ namespace chess_clock
             timer.Start();
         }
 
-        public void Lodid()
+        public void Load()
         {
             whiteL.Visibility = Visibility.Collapsed;
             whiteB.Visibility = Visibility.Collapsed;
@@ -45,11 +45,13 @@ namespace chess_clock
             fiveB.Visibility = Visibility.Visible;
             oneB.Visibility = Visibility.Visible;
             idoL.Visibility = Visibility.Visible;
+            whiteL.Foreground = Brushes.White;
+            blackL.Foreground = Brushes.White;
         }
 
-        private void FoWindow_Loaded(object sender, RoutedEventArgs e)
+        private void Main_Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Lodid();
+            Load();
         }
         void timer_Tick(object sender, EventArgs e)
         {
@@ -127,6 +129,8 @@ namespace chess_clock
         private void whiteB_Click(object sender, RoutedEventArgs e)
         {
             isActiveW = true;
+            whiteL.Foreground = Brushes.Red;
+            blackL.Foreground = Brushes.White;
             blackB.Visibility = Visibility.Collapsed;
             whiteB.Visibility = Visibility.Collapsed;
         }
@@ -134,23 +138,25 @@ namespace chess_clock
         private void blackB_Click(object sender, RoutedEventArgs e)
         {
             isActiveB = true;
+            whiteL.Foreground = Brushes.White;
+            blackL.Foreground = Brushes.Red;
             blackB.Visibility = Visibility.Collapsed;
             whiteB.Visibility = Visibility.Collapsed;
         }
 
         private void closeL_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            FoWindow.Close();
+            Main_Window.Close();
         }
 
         private void resetL_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Lodid();
+            Load();
             isActiveB= false;
             isActiveW= false;
         }
 
-        private void FoWindow_KeyDown(object sender, KeyEventArgs e)
+        private void Main_Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
             {
@@ -158,6 +164,8 @@ namespace chess_clock
                 {
                     isActiveB = false;
                     isActiveW = true;
+                    whiteL.Foreground = Brushes.Red;
+                    blackL.Foreground = Brushes.White;
                     string bszam = whiteL.Content.ToString();
                     if (bszam.Length == 4)
                     {
@@ -177,7 +185,9 @@ namespace chess_clock
                 else if (isActiveW)
                 {
                     isActiveW = false;
-                    isActiveB = true; 
+                    isActiveB = true;
+                    blackL.Foreground = Brushes.Red;
+                    whiteL.Foreground = Brushes.White;
                     string wszam = blackL.Content.ToString();
                     if (wszam.Length == 4)
                     {

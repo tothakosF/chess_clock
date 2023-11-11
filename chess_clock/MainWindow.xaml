@@ -1,4 +1,4 @@
-﻿<Window x:Name="FoWindow" x:Class="chess_clock.MainWindow"
+﻿<Window x:Name="Main_Window" x:Class="chess_clock.MainWindow"
         WindowState="Maximized"
         WindowStyle="None"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -7,23 +7,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:chess_clock"
         mc:Ignorable="d"
-        Title="MainWindow" Loaded="FoWindow_Loaded" ResizeMode="CanMinimize" Height="1097" Width="1491" KeyDown="FoWindow_KeyDown">
+        Title="MainWindow" Loaded="Main_Window_Loaded" ResizeMode="CanMinimize" Height="1080" Width="1920" KeyDown="Main_Window_KeyDown">
     <Window.Background>
         <ImageBrush ImageSource="/chess_bg.jpg"/>
     </Window.Background>
+    <Viewbox>
     <Grid Height="1080">
-        <Label x:Name="whiteL" Content="Label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="238,274,0,0" VerticalAlignment="Top" Height="302" Width="434" FontSize="140" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black" Foreground="#FFF4F0F0" Background="#00000000" BorderBrush="Black"/>
-        <Label x:Name="blackL" Content="Label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="844,274,0,0" VerticalAlignment="Top" Height="302" FontSize="140" HorizontalAlignment="Left" Width="434" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black" Foreground="#FFF4F0F0" Background="#00000000" BorderBrush="Black"/>
+        <Label x:Name="whiteL" Content="Label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="443,274,1046,504" FontSize="140" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black" Foreground="#FFF4F0F0" Background="#00000000" BorderBrush="Black"/>
+        <Label x:Name="blackL" Content="Label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="1046,274,443
+,504" FontSize="140" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black" Foreground="#FFF4F0F0" Background="#00000000" BorderBrush="Black"/>
         <Button x:Name="tenB" HorizontalContentAlignment="Center" Content="10:00" HorizontalAlignment="Left" Margin="39,45,0,0" VerticalAlignment="Top" Height="72" Width="174" FontSize="50" Click="tenB_Click" FontFamily="Arial" Foreground="#FFFFFDFD" BorderBrush="Gray" Background="Transparent">
         </Button>
         <Button x:Name="fiveB" Content="5:00" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="39,121,0,0" VerticalAlignment="Top" Height="72" Width="174" FontSize="50" Click="fiveB_Click" FontFamily="Arial" Foreground="#FFFFFDFD" BorderBrush="Gray" Background="Transparent"/>
         <Button x:Name="oneB" Content="1:00" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="39,197,0,0" VerticalAlignment="Top" Height="72" Width="174" FontSize="50" Click="oneB_Click" FontFamily="Arial" Foreground="#FFFFFDFD" BorderBrush="Gray" Background="Transparent" >
         </Button>
-        <Button x:Name="whiteB" Content="Start" HorizontalAlignment="Left" Margin="339,576,0,0" VerticalAlignment="Top" Height="84" Width="232" FontSize="50" FontFamily="Arial" Click="whiteB_Click"/>
-        <Button x:Name="blackB" Content="Start" HorizontalAlignment="Left" Margin="945,576,0,0" VerticalAlignment="Top" Height="84" Width="232" FontSize="50" FontFamily="Arial" Click="blackB_Click"/>
+        <Button x:Name="whiteB" Content="Start" HorizontalAlignment="Left" Margin="542,581,0,0" VerticalAlignment="Top" Height="84" Width="232" FontSize="50" FontFamily="Arial" Click="whiteB_Click"/>
+        <Button x:Name="blackB" Content="Start" HorizontalAlignment="Left" Margin="1146,581,0,0" VerticalAlignment="Top" Height="84" Width="232" FontSize="50" FontFamily="Arial" Click="blackB_Click"/>
         <Label x:Name="idoL" Content="Válassz egy időintervallumot!" HorizontalAlignment="Left" Margin="39,274,0,0" VerticalAlignment="Top" Height="61" Width="594" Foreground="White" FontFamily="Arial" FontSize="32"/>
-        <Label x:Name="closeL" Content="X" HorizontalAlignment="Left" Margin="1496,10,0,0" VerticalAlignment="Top" Height="44" Width="36" FontFamily="Arial" FontSize="30" Foreground="White" PreviewMouseLeftButtonUp="closeL_PreviewMouseLeftButtonUp" RenderTransformOrigin="0.411,0.661"/>
-        <Label x:Name="resetL" Content="RESET" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="1373,775,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="30" Height="44" Width="108" PreviewMouseLeftButtonUp="resetL_PreviewMouseLeftButtonUp"/>
-
-    </Grid>
+        <Label x:Name="closeL" Content="X" HorizontalAlignment="Left" Margin="1874,10,0,0" VerticalAlignment="Top" Height="44" Width="36" FontFamily="Arial" FontSize="30" Foreground="White" PreviewMouseLeftButtonUp="closeL_PreviewMouseLeftButtonUp" RenderTransformOrigin="0.411,0.661"/>
+            <Label x:Name="resetL" Content="RESET" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="1802,1026,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="30" Height="44" Width="108" PreviewMouseLeftButtonUp="resetL_PreviewMouseLeftButtonUp"/>
+        </Grid>
+    </Viewbox>
 </Window>
